@@ -2,7 +2,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
   background-color: #0D0F12;
 }
 
@@ -47,6 +49,12 @@ body {
 
 .hero-block {
   font-size: 16px;
+  padding: 40px 0;
+  line-height: 24px;
+}
+
+.feature-item span  {
+  width: 77%;
 }
 
 h1 {
@@ -56,4 +64,52 @@ h1 {
 
 .slider-section {
   background-color: #1F242C;
+}
+
+/* Мобильный адаптив */
+@media (max-width: 768px) {
+  .navbar-brand svg {
+    width: 60px;
+    height: auto;
+  }
+
+  .navbar-toggler {
+    color: white !important;
+    border-color:#17191D !important;
+  }
+    
+  h1 {
+    font-size: 36px; 
+    line-height: 1.2;
+  }
+
+  .text-muted-mobile {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  .hero-block {
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  
+  .feature-item svg {
+    width: 48px; 
+    height: 48px;
+  }
+  .feature-item span {
+    font-size: 13px;
+    line-height: 1.3;
+    font-weight: 600;
+    padding: 0 5px;
+  }
+  
+  .earth-col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
 }

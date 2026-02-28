@@ -1,30 +1,154 @@
 .slider-wrapper {
-    max-width: 945px;
+  max-width: 945px;
 }
 
 .slider-for img {
-    width: 100%;
-    height: 530px;
-    object-fit: cover;
-    border-radius: 6px;
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .slider-nav {
-    max-width: 945px;
+  max-width: 945px;
 }
 
 .slider-nav .slick-slide {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .thumb-slide {
-    width: 165px;
-    height: 165px;
-    object-fit: cover;
-    border-radius: 6px;
-    cursor: pointer;
+  width: 165px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .slider-nav .slick-center .thumb-slide {
-    border: 3px solid #FF342B;
+  border: 3px solid #ff342b;
+}
+
+.slick-prev,
+.slick-next {
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #ff342b;
+}
+
+.slider-nav .slick-prev {
+  left: -45px;
+}
+
+.slider-nav .slick-next {
+  right: -45px;
+}
+
+.slider-for .slick-prev {
+  left: 15px;
+}
+
+.slider-for .slick-next {
+  right: 15px;
+}
+
+.modal-dialog {
+  margin: 0;
+}
+
+.modal-content {
+  background: #000;
+  height: 100vh;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-slider {
+  width: 100%;
+}
+
+.modal-image {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: contain;
+}
+
+.modal-slider .slick-prev {
+  left: 40px;
+  z-index: 1000;
+}
+
+.modal-slider .slick-next {
+  right: 40px;
+  z-index: 1000;
+}
+
+.modal-slider .slick-prev:before,
+.modal-slider .slick-next:before {
+  font-size: 50px;
+  color: #ff342b;
+}
+
+.thumb-slide {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .slider-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .slider-nav {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    width: auto !important;
+
+    overflow: visible !important;
+
+    padding: 0 6px;
+  }
+
+  .slider-nav .slick-list {
+    overflow: visible !important;
+  }
+
+  .slider-for img {
+    height: 250px;
+  }
+
+  .thumb-slide {
+    width: 100% !important;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .slider-nav .slick-slide {
+    padding: 0 4px;
+  }
+
+  .slider-nav .slick-prev,
+  .slider-nav .slick-next {
+    display: none !important;
+  }
 }
